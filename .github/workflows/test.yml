@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+
+    - name: Test with black
+      if: always()
+      run: black --check .
+
+    - name: Test with unittest
+      if: always()
+      run: python -m unittest discover

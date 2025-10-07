@@ -25,9 +25,9 @@ def main() -> None:
     with open(in_file_path, encoding="utf_8") as in_file_d:
         in_file_content = in_file_d.read()
     output = mindblow.compile(in_file_content)
-    with open(out_file_path,'wb') as out_fd:
+    with open(out_file_path, "wb") as out_fd:
         out_fd.write(output)
-    print('done')
+    print("done")
 
 
 def validate_input(in_file: str, out_file: str) -> None:

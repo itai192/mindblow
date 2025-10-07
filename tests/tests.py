@@ -13,7 +13,6 @@ EXAMPLES_PATH = Path("src") / Path("example")
 
 class TestCompiler(unittest.TestCase):
     def test_compile(self):
-        print(os.listdir())
         with open(EXAMPLES_PATH / Path("mind.🤯")) as source_code_file:
             source_code = source_code_file.read()
         attempt_object_bytes = mindblow.compile(source_code)

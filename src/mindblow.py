@@ -4,4 +4,4 @@ def compile(code: str) -> bytes:
 
 
 def decompile(exe: bytes) -> str:
-    return int.from_bytes(bytes, "big") * "🤯"
+    return int.from_bytes(exe, "big") * "🤯"
